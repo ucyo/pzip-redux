@@ -1,0 +1,8 @@
+[package]
+name = "pzip-redux"
+version = "0.1.0"
+authors = ["ucyo <cayoglu@me.com>"]
+edition = "2018"
+
+[dependencies]
+redux = "0.2.0"
