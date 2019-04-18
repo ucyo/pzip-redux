@@ -11,9 +11,9 @@ fn main() {
     let encoded = pzip_redux::encode(&data, symbol, freq, code);
     let decoded = pzip_redux::decode(&encoded, symbol, freq, code);
 
-    println!("+++ Adaptive Range Encoder +++")
+    println!("+++ Adaptive Range Encoder +++");
     for val in encoded.iter() {
-        println!("{:08b}", val)
+        println!("{:08b}", val);
     }
     println!("{:?} {}", encoded, encoded.len());
     println!("{:?} {}", decoded, decoded.len());
