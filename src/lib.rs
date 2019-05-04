@@ -7,7 +7,7 @@ pub fn encode(data: &Vec<u8>, symbol: usize, frequency: usize, code: usize) -> V
     let params = Parameters::new(symbol, frequency, code).unwrap();
     let model = AdaptiveTreeModel::new(params);
 
-    let size = redux::compress(&mut cursor, &mut result, model).unwrap();
+    let _ = redux::compress(&mut cursor, &mut result, model).unwrap();
     // println!("{:?}", size);
     result
 }
@@ -19,7 +19,7 @@ pub fn decode(data: &Vec<u8>,  symbol: usize, frequency: usize, code: usize) -> 
     let params = Parameters::new(symbol, frequency, code).unwrap();
     let model = AdaptiveTreeModel::new(params);
 
-    let size = redux::decompress(&mut cursor, &mut result, model).unwrap();
+    let _ = redux::decompress(&mut cursor, &mut result, model).unwrap();
     // println!("{:?}", size);
     result
 }
